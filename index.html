@@ -12,10 +12,7 @@ GitHub: https://github.com/ctrezevant/420-is-a-number
 
 Fuma gramen cotidie!
 -->
-
-
 <html lang="en">
-
 	<head>
 		<title>Smoke Weed Everyday</title>
 		<meta charset="utf-8">
@@ -70,10 +67,6 @@ img{
 		<img src="/resources/420/images/weed.png" class="dankkush" onclick="blazeIt();">
 		<img src="/resources/420/images/snoop.gif" class="snoop" width="20%" height="50%" style="display: block;left: 0px;bottom: 0px;z-index: 500;" onclick="blazeIt();" ></img>	
 		<img src="/resources/420/images/dank_ass_bg.jpeg" style="position:fixed; display: block; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1000;">
-		
-
-		<!-- jQuery? more like crayQuery -->
-		<!-- I concur. Totally crazy. -->
 		<script src="//code.jquery.com/jquery-latest.min.js"></script>
 		
 		<script>
@@ -104,36 +97,34 @@ $(this).bind("touchstart touchmove mousemove", function (e) {
     h.append('<img src="/resources/420/images/weed.png" onclick="blazeIt();" class="kush-painted" style="display: block; left: ' + (e.pageX + Math.random() * 10) + "px; top: " + (e.pageY + Math.random() * 10) + 'px">')
 });
 
+var swed = new Audio('/resources/420/audio/blazeit.mp3');
+
 function blazeIt() {
- document.getElementById('blazeit').play();
- console.log("420 Blayse it fgt.");
-};
+ swed.play();
+ console.log("Smoke Weed Everyday.");
+}
 
 //Waves a damp towel about the page until the smoke is cleared.
 function deHotbox() {
  smokecanvas.width = smokecanvas.width;
-};
+}
 
 //Quickly hides the drugs.
 function dudehidetheWeed() {
-//document.getElementsByClassName("kush-painted").remove();
-$('.kush-painted').remove();
-};
+  $('.kush-painted').remove();
+}
 
 //Does all of the above quite quickly.
 function rehab() {
  deHotbox();
  dudehidetheWeed();
  blazeIt();
-};
+}
+
+window.addEventListener('load', blazeIt);
 </script>
 
 <canvas id="smokecanvas" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:0;"></canvas>
 <script type="text/javascript" src="/resources/420/javascript/smoke.js"></script>
-
-<audio id="blazeit" src="/resources/420/audio/blazeit.mp3" type="audio/mpeg"></audio>
-
-<script type="text/javascript">window.onload = blazeIt();</script>
-
 </body>
 </html>
